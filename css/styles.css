@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --color-green: #50fa7b
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@
 body {
     background: #282a36;
     font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 header {
     padding: 32px;
@@ -16,20 +21,21 @@ header {
     background: rgba(0, 0 ,0, 0.1);
 }
 
-header div {
+.links {
     text-align: center;
 }
 
-header div a {
+.links a {
     color: #fff;
     font-size: 18px;
     line-height: 28px;
     margin: 0 16px;
+    padding-bottom: 3px;
     text-decoration: none;
 }
 
-header div a:hover {
-    color: #50fa7b;
+.links a:hover {
+    color: var(--color-green);
     transition: color 300ms;
 }
 
@@ -40,8 +46,9 @@ header div a:hover {
 
 #wrapper img {
     border-radius: 50%;
-    border: 5px solid #50fa7b;
+    border: 5px solid var(--color-green);
     margin-bottom: 32px;
+    height: 300px;
 }
 
 #wrapper h1 {
@@ -54,4 +61,17 @@ header div a:hover {
     font-size: 24px;
     line-height: 34px;
     font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
 }
