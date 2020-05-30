@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --color-green: #50fa7b
+    --color-green: #50fa7b;
+    --scrollbarBG: #282a36;
+    --thumbBG: #50fa7b;
 }
 
 * {
@@ -14,9 +16,26 @@ body {
     background: #282a36;
     font-family: 'Roboto', sans-serif;
     color: #fff;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
 header {
-    padding: 32px;
+    padding: 26px;
     border-bottom: 1px solid #333;
     background: rgba(0, 0 ,0, 0.1);
 }
@@ -27,8 +46,8 @@ header {
 
 .links a {
     color: #fff;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
     margin: 0 16px;
     padding-bottom: 3px;
     text-decoration: none;
@@ -41,25 +60,25 @@ header {
 
 #wrapper {
     text-align: center;
-    padding: 32px;
+    padding: 26px;
 }
 
 #wrapper img {
     border-radius: 50%;
     border: 5px solid var(--color-green);
-    margin-bottom: 32px;
-    height: 300px;
+    margin-bottom: 26px;
+    height: 250px;
 }
 
 #wrapper h1 {
-    font-size: 42px;
-    line-height: 52px;
+    font-size: 38px;
+    line-height: 48px;
     font-weight: bold;
 }
 
 #wrapper h2 {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: normal;
     margin-top: 8px;
     opacity: 0.8;
@@ -67,9 +86,13 @@ header {
 
 #wrapper p {
     max-width: 500px;
-    margin: 32px auto;
-    font-size: 24px;
-    line-height: 34px;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#links-footer {
+    margin-bottom: 20px;
 }
 
 #links-footer a {
